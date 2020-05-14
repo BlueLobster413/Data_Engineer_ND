@@ -1,0 +1,89 @@
+**Fact Table:**
+ |-- i94port: string (nullable = true)
+ The 3 character Port code, Ex: SFR for San Francisco
+ 
+ |-- Arrival_Date: double (nullable = true)
+ It's the Arrival Date in the USA. It is a SAS date numeric field that a permament format has not been applied.
+ Ex: 20548.0
+ 
+ |-- Visa: double (nullable = true)
+ Visa codes collapsed into three categories:
+   1 = Business
+   2 = Pleasure
+   3 = Student
+ 
+ |-- Mode: double (nullable = true)
+ The means of transport the immigrant came through. Categorized into 4 types:
+   1 - Air
+   2 - Sea
+   3 - Land
+   9 - Not Reported
+  
+ |-- AverageTemperature: string (nullable = true)
+ String representation of average temperature in the city on a day.
+ 
+ |-- Id: long (nullable = false)
+ Unique identifier for the table
+ 
+ |-- Arrival_Date_dt: string (nullable = true)
+ Deconstructed arrival data from 'Arrival_Date' column
+ Ex: 2016-04-04
+ 
+ 
+ **Immigration Dimension Table:**
+ |-- i94port: string (nullable = true)
+ The 3 character Port code, Ex: SFR for San Francisco
+ 
+ |-- i94cit: double (nullable = true)
+ The numeric representation of the city of the port.
+ Ex: 111 =  'FRANCE'
+ 
+ |-- i94mode: double (nullable = true)
+  The means of transport the immigrant came through. Categorized into 4 types:
+   1 - Air
+   2 - Sea
+   3 - Land
+   9 - Not Reported
+ 
+ |-- i94visa: double (nullable = true)
+  Visa codes collapsed into three categories:
+   1 = Business
+   2 = Pleasure
+   3 = Student
+ 
+ |-- i94bir: double (nullable = true)
+ Age of immigrant in Years
+ 
+ |-- arrdate: double (nullable = true)
+  It's the Arrival Date in the USA. It is a SAS date numeric field that a permament format has not been applied.
+ Ex: 20548.0
+ 
+ |-- i94mon: double (nullable = true)
+ Numeric month
+ 
+ |-- i94yr: double (nullable = true)
+ Numeric Year
+ 
+ |-- depdate: double (nullable = true)
+   It's the Departure Date in the USA. It is a SAS date numeric field that a permament format has not been applied.
+ Ex: 20548.0
+
+
+** Weather dimension table:**
+ |-- i94port: string (nullable = true)
+ The 3 character Port code, Ex: SFR for San Francisco
+ 
+ |-- AverageTemperature: string (nullable = true)
+ String representation of average temperature in the city on a day.
+ 
+ |-- City: string (nullable = true)
+ City of the location the average temperature is recorded.
+ 
+ |-- Country: string (nullable = true)
+ Country of the location the average temperature is recorded.
+ 
+ |-- Latitude: string (nullable = true)
+ Latitude of the location the average temperature is recorded.
+ 
+ |-- Longitude: string (nullable = true)
+ Longitude of the location the average temperature is recorded.
